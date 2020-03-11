@@ -15,44 +15,58 @@
 # You should have received a copy of the GNU General Public License
 # along with wikitools.  If not, see <http://www.gnu.org/licenses/>.
 
+
 class APIError(Exception):
-	"""Base class for errors"""
+    """Base class for errors"""
+
 
 class APIQueryError(APIError):
-	"""Error message in API query"""
+    """Error message in API query"""
+
 
 class APIDisabled(APIError):
-	"""API not enabled"""
+    """API not enabled"""
+
 
 class APIFailure(APIError):
-	"""API appears to be broken, or this isn't a MediaWiki API"""
+    """API appears to be broken, or this isn't a MediaWiki API"""
+
 
 class WikiError(Exception):
-	"""Base class for errors"""
+    """Base class for errors"""
+
 
 class UserBlocked(WikiError):
-	"""Trying to edit while blocked"""
+    """Trying to edit while blocked"""
+
 
 class UnsupportedError(WikiError):
-	"""Feature not available on this wiki"""
+    """Feature not available on this wiki"""
+
 
 class BadTitle(WikiError):
-	"""Invalid title"""
+    """Invalid title"""
+
 
 class NoPage(WikiError):
-	"""Non-existent page"""
+    """Non-existent page"""
+
 
 class BadNamespace(WikiError):
-	"""Invalid namespace number"""
+    """Invalid namespace number"""
+
 
 class EditError(WikiError):
-	"""Problem with edit request"""
+    """Problem with edit request"""
+
 
 class ProtectError(WikiError):
-	"""Problem with protection request"""
+    """Problem with protection request"""
+
 
 class FileDimensionError(WikiError):
-	"""Invalid dimensions"""
+    """Invalid dimensions"""
+
 
 class UploadError(WikiError):
-	"""Error during uploading"""
+    """Error during uploading"""
