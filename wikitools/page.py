@@ -840,6 +840,7 @@ class Page(object):
             raise exceptions.NoPage
         params = {
             "action": "purge",
+            "pageid": self.pageid
         }
         if forcelinkupdate:
             params["forcelinkupdate"] = 1
